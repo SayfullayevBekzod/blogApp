@@ -16,7 +16,7 @@ class UserAdmin(admin.ModelAdmin):
 
 
 @admin.register(Post)
-class PostAdmin(admin.ModelAdmin): #                         yangi yaratilsa ozgaradi, har safar ozgaradi
+class PostAdmin(admin.ModelAdmin): #yangi yaratilsa ozgaradi, har safar ozgaradi
     list_display = ["title", "content", "author", "is_active", "published", "created_at", "updated_at"]
     search_fields = ["title", "content"]
     list_filter = ["author", "is_active"]

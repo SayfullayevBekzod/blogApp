@@ -76,10 +76,10 @@ def post_update(request, pk: int):
             messages.success(request, "post successfully updated")
             return redirect(reverse('blog:post-detail', kwargs={"pk": post.id}))
         else:
-            return render(request, "blog/post_update.html", {"form": form})
+            return render(request, "blog/../../../N18/DjangoApp/templates/blog/post_update.html", {"form": form})
     else:
         form = PostUpdateForm(instance=post)
-        return render(request, "blog/post_update.html", {"form": form})
+        return render(request, "blog/../../../N18/DjangoApp/templates/blog/post_update.html", {"form": form})
 
 
 @login_required()
